@@ -21,8 +21,7 @@ function applyTheme(theme) {
   themeColorMeta.content = isDark ? "#191a17" : "#f6f5f0";
 }
 
-const savedTheme = localStorage.getItem(themeStorageKey);
-applyTheme(savedTheme === "dark" ? "dark" : "light");
+applyTheme(document.documentElement.dataset.theme);
 
 themeButton.addEventListener("click", () => {
   const nextTheme =

@@ -9,6 +9,11 @@
     />
     <meta name="theme-color" content="#f6f5f0" />
     <title>Jesús Bernabé Imedio Perea — Designer & Developer</title>
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme =
+        savedTheme === "dark" ? "dark" : "light";
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
