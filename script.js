@@ -1,6 +1,6 @@
 const filterButtons = document.querySelectorAll(".filter-button");
 const projectCards = document.querySelectorAll(".project-card");
-const emptyMessage = document.querySelector(".filter-empty");
+const filterStatus = document.querySelector(".filter-status");
 const yearElement = document.querySelector("#current-year");
 const themeButton = document.querySelector(".theme-toggle");
 const themeButtonLabel = document.querySelector(".theme-toggle-label");
@@ -52,6 +52,9 @@ filterButtons.forEach((button) => {
       if (isVisible) visibleProjects += 1;
     });
 
-    emptyMessage.hidden = visibleProjects > 0;
+    filterStatus.textContent =
+      visibleProjects === 0
+        ? "No projects in this category."
+        : `${visibleProjects} ${visibleProjects === 1 ? "project" : "projects"} shown.`;
   });
 });
